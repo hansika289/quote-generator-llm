@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quote Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1>Quote Generator</h1>
+        <p>Generate inspirational quotes with a single click.</p>
+      </header>
+
+      <main class="card">
+        <label class="field">
+          <span class="field-label">Prompt (optional)</span>
+          <textarea
+            id="prompt"
+            rows="2"
+            placeholder="e.g. motivation for exams"
+          ></textarea>
+        </label>
+
+        <div class="controls">
+          <button id="generate-btn">Generate quote</button>
+          <span id="status" class="status"></span>
+        </div>
+
+        <section class="output">
+          <h2>Generated quote</h2>
+          <div id="quote" class="quote-box">
+            Your quote will appear here.
+          </div>
+        </section>
+
+        <section class="output">
+          <h2>History</h2>
+          <div id="history" class="history-list">
+            <div class="history-placeholder">
+              No quotes yet. Generate one to see your prompt history.
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Powered by a mini GPT-style model.</span>
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+  </html>
+
