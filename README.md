@@ -1,4 +1,4 @@
-## Mini LLM Quote Generator
+## Quote Generator
 
 This project is a tiny character-level GPT-style language model that learns from a text file of quotes and then generates new, quote-like sentences.
 
@@ -86,4 +86,5 @@ python app.py
 - Enter an optional prompt (e.g. `Life is`).
 - Click **Generate quote**.
 - The generated quote will appear in the card below.
+
 
